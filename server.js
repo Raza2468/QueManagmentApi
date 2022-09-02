@@ -139,7 +139,7 @@ app.post("/token", (req, res, next) => {
 app.post('/getTokenNumber', (req, res) => {
 
 
-    Token.find({ _id: req.body.FranchiseObjectID },
+    Token.find({ FranchiseObjectID: req.body.FranchiseObjectID },
 
         (err, data) => {
             if (!err) {
