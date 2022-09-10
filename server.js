@@ -100,8 +100,8 @@ app.post("/token", (req, res, next) => {
 
                 if (!err) {
 
-                    newNumber = parseInt(doc.CurrntTokenNumber) + 1;
-                    doc.CurrntTokenNumber = newNumber;
+                    newNumber = parseInt(doc.LastIssueNumber) + 1;
+                    doc.LastIssueNumber = newNumber;
 
                     const newToken = new Token({
                         IMEI: req.body.IMEI,
